@@ -101,6 +101,9 @@ include $(TMK_DIR)/rules.mk
 ansi: OPT_DEFS += -DLAYOUT_ANSI
 ansi: all
 
+priyadi: OPT_DEFS += -DLAYOUT_PRIYADI
+priyadi: all
+
 iso: OPT_DEFS += -DLAYOUT_ISO
 iso: all
 
