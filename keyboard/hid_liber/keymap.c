@@ -95,6 +95,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     #include "keymap_iso.h"
 #elif defined(LAYOUT_ANSI)
     #include "keymap_ansi.h"
+#elif defined(LAYOUT_PRIYADI)
+    #include "keymap_priyadi.h"
 #else
     #include "keymap_ansi.h"
 #endif
