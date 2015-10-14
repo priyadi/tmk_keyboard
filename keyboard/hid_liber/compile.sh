@@ -1,4 +1,4 @@
 #!/bin/sh
 
-make -f Makefile.pjrc clean
-make -f Makefile.pjrc priyadi
+make -f Makefile.lufa clean
+make -f Makefile.lufa priyadi
