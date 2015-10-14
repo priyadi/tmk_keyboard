@@ -25,7 +25,8 @@ static const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
       TAB,    Q,    W,    E,    R,    T,    Y,    U,    I,    O,    P, LBRC, RBRC, BSLS,  DEL,  END, PGDN, \
      CAPS,    A,    S,    D,    F,    G,    H,    J,    K,    L, SCLN, QUOT,        ENT,                   \
      LSFT, NUBS,    Z,    X,    C,    V,    B,    N,    M, COMM,  DOT, SLSH,       RSFT,         UP,       \
-     LCTL, LGUI, LALT,              FN0,                          FN1, RALT, RGUI, RCTL, LEFT, DOWN, RGHT),
+     // LCTL, LGUI, LALT,              FN0,                          FN1, RALT, RGUI, RCTL, LEFT, DOWN, RGHT),
+     LCTL, LGUI, LALT,              FN0,                         RALT, RGUI,  APP, RCTL, LEFT, DOWN, RGHT),
 
 /* Layer 1: SpaceFn layer
  *
@@ -71,16 +72,16 @@ static const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * `-----------------------------------------------------------' `-----------'
  */
 
- KEYMAP(\
-       NO,   NO,   NO,   NO,   NO,   NO,   NO,   NO,   NO,   NO,   NO,   NO,   NO,         NO,   NO,   NO, \
-       NO,   NO,   NO,   NO,   NO,   NO,   NO,   NO,   NO,   NO,   NO,   NO,   NO,   NO,   NO,   NO,   NO, \
-       NO,   NO,   NO,   NO,   NO,   NO,   NO,   NO,   NO,   NO,   NO,   NO,   NO,   NO,   NO,   NO,   NO, \
-       NO,   NO,   NO,   NO,   NO,   NO,   NO,   NO,   NO,   NO,   NO, PGUP,         NO,                   \
-       NO,   NO,   NO,   NO,   NO,   NO,   NO,   NO,   NO, HOME,  END, PGDN,         UP,         NO,       \
-     TRNS, TRNS, TRNS,                     NO,                     NO, LEFT, DOWN, RGHT,   NO,   NO,   NO),
+ // KEYMAP(\
+ //       NO,   NO,   NO,   NO,   NO,   NO,   NO,   NO,   NO,   NO,   NO,   NO,   NO,         NO,   NO,   NO, \
+ //       NO,   NO,   NO,   NO,   NO,   NO,   NO,   NO,   NO,   NO,   NO,   NO,   NO,   NO,   NO,   NO,   NO, \
+ //       NO,   NO,   NO,   NO,   NO,   NO,   NO,   NO,   NO,   NO,   NO,   NO,   NO,   NO,   NO,   NO,   NO, \
+ //       NO,   NO,   NO,   NO,   NO,   NO,   NO,   NO,   NO,   NO,   NO, PGUP,         NO,                   \
+ //       NO,   NO,   NO,   NO,   NO,   NO,   NO,   NO,   NO, HOME,  END, PGDN,         UP,         NO,       \
+ //     TRNS, TRNS, TRNS,                     NO,                     NO, LEFT, DOWN, RGHT,   NO,   NO,   NO),
 };
 
 static const uint16_t PROGMEM fn_actions[] = {
 	[0] = ACTION_LAYER_TAP_KEY(1, KC_SPC),
-  [1] = ACTION_LAYER_MOMENTARY(2)
+  // [1] = ACTION_LAYER_MOMENTARY(2),
 };
