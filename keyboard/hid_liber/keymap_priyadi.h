@@ -35,22 +35,22 @@ static const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * ,-----------------------------------------------------------. ,-----------.
  * |   |F1 |F2 |F3 |F4 |F5 |F6 |F7 |F8 |F9 |F10|F11|F12|Del    | |   |   |   |
  * |-----------------------------------------------------------| |-----------|
- * |     |   |PgU| Up|PgD|   |   |PgU|Up |PgD|Prs|Vod|Vou|Mut  | |   |   |   |
+ * |     |   |Prv|Ply|Nxt|   |   |PgU|Up |PgD|Prs|Vl-|Vl+|Mute | |   |   |   |
  * |-----------------------------------------------------------| `-----------'
- * |      |   |Lef|Dow|Rig|Hom|Hom|Lef|Dow|Rig|   |   |        |              
+ * |      |   |   |   |   |   |Hom|Lef|Dow|Rig|   |   |        |              
  * |-----------------------------------------------------------|     ,---.    
- * |    |   |Prv|PP |Nxt|End|Spc|End|   |   |   |   |          |     |   |    
+ * |    |   |   |   |   |   |Spc|End|   |   |   |   |          |     |   |    
  * |-----------------------------------------------------------| ,-----------.
  * |   |   |   |                               |   |   |   |   | |   |   |   |
  * `-----------------------------------------------------------' `-----------'
  */
 
  KEYMAP(\
-       NO,   NO,   NO,   NO,   NO,   NO,   NO,   NO,   NO,   NO,   NO,   NO,   NO,         NO,   NO,   NO, \
-       NO,   F1,   F2,   F3,   F4,   F5,   F6,   F7,   F8,   F9,   F10,  F11,  F12, DEL,   NO,   NO,   NO, \
-       NO,   NO, PGUP,   UP, PGDN,   NO,   NO, PGUP,   UP, PGDN, PSCR, VOLD, VOLU, MUTE,   NO,   NO,   NO, \
-       NO,   NO, LEFT, DOWN, RGHT, HOME, HOME, LEFT, DOWN, RGHT,   NO,   NO,         NO,                   \
-       NO,   NO, MPRV, MSEL, MNXT,  END,  SPC,  END,   NO,   NO,   NO,   NO,         NO,         NO,       \
+     TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS,       TRNS, TRNS, TRNS, \
+     TRNS,   F1,   F2,   F3,   F4,   F5,   F6,   F7,   F8,   F9,   F10,  F11,  F12, DEL, TRNS, TRNS, TRNS, \
+     TRNS, TRNS, MPRV, MPLY, MNXT, TRNS, TRNS, PGUP,   UP, PGDN, PSCR, VOLD, VOLU, MUTE, TRNS, TRNS, TRNS, \
+     TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, HOME, LEFT, DOWN, RGHT, TRNS, TRNS,       TRNS,                   \
+     TRNS, TRNS, TRNS, TRNS, TRNS, TRNS,  SPC,  END, TRNS, TRNS, TRNS, TRNS,       TRNS,       TRNS,       \
      TRNS, TRNS, TRNS,                   TRNS,                   TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS),
 
 };
