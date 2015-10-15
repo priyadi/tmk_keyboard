@@ -23,9 +23,8 @@ static const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
       ESC,   F1,   F2,   F3,   F4,   F5,   F6,   F7,   F8,   F9,  F10,  F11,  F12,       PSCR, SLCK,  BRK, \
       GRV,    1,    2,    3,    4,    5,    6,    7,    8,    9,    0, MINS,  EQL, BSPC,  INS, HOME, PGUP, \
       TAB,    Q,    W,    E,    R,    T,    Y,    U,    I,    O,    P, LBRC, RBRC, BSLS,  DEL,  END, PGDN, \
-     CAPS,    A,    S,    D,    F,    G,    H,    J,    K,    L, SCLN, QUOT,        ENT,                   \
+     BSPC,    A,    S,    D,    F,    G,    H,    J,    K,    L,  FN3, QUOT,        ENT,                   \
      LSFT, NUBS,    Z,    X,    C,    V,    B,    N,    M, COMM,  DOT, SLSH,       RSFT,         UP,       \
-     // LCTL, LGUI, LALT,              FN0,                          FN1, RALT, RGUI, RCTL, LEFT, DOWN, RGHT),
      LCTL, LGUI, LALT,              FN0,                         RALT, RGUI,  APP, RCTL, LEFT, DOWN, RGHT),
 
 /* Layer 1: SpaceFn layer
@@ -49,8 +48,8 @@ static const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  KEYMAP(\
      TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS,       TRNS, TRNS, TRNS, \
      TRNS,   F1,   F2,   F3,   F4,   F5,   F6,   F7,   F8,   F9,  F10,  F11,  F12, DEL,  TRNS, TRNS, TRNS, \
-     TRNS, TRNS, MPRV, MPLY, MNXT, TRNS, TRNS, PGUP,   UP, PGDN, PSCR, VOLD, VOLU, MUTE, TRNS, TRNS, TRNS, \
-     TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, HOME, LEFT, DOWN, RGHT, TRNS, TRNS,       TRNS,                   \
+     CAPS, TRNS, MPRV, MPLY, MNXT, TRNS, TRNS, PGUP,   UP, PGDN, PSCR, VOLD, VOLU, MUTE, TRNS, TRNS, TRNS, \
+      DEL, TRNS, TRNS, TRNS, TRNS, TRNS, HOME, LEFT, DOWN, RGHT, TRNS, TRNS,       TRNS,                   \
      TRNS, TRNS, TRNS, TRNS, TRNS, BTN3,  SPC,  END, TRNS, TRNS, TRNS, TRNS,       TRNS,       TRNS,       \
      TRNS, TRNS, TRNS,                   TRNS,                     NO, TRNS,  APP,  INS, TRNS, TRNS, TRNS),
 
@@ -82,6 +81,6 @@ static const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 };
 
 static const uint16_t PROGMEM fn_actions[] = {
-	[0] = ACTION_LAYER_TAP_KEY(1, KC_SPC),
-  // [1] = ACTION_LAYER_MOMENTARY(2),
+    [0] = ACTION_LAYER_TAP_KEY(1, KC_SPC),
+    [3] = ACTION_LAYER_TAP_KEY(2, KC_SCLN),
 };
