@@ -17,9 +17,9 @@ const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [0] =
     KEYMAP(ESC, 1,   2,   3,   4,   5,   6,   7,   8,   9,   0,   MINS,EQL,  GRV,BSPC, \
            TAB, Q,   W,   E,   R,   T,   Y,   U,   I,   O,   P,   LBRC,RBRC,BSLS, \
-           CAPS,A,   S,   D,   F,   G,   H,   J,   K,   L,   SCLN,QUOT,ENT,  \
+           CAPS,A,   S,   D,   F,   G,   H,   J,   K,   L,   FN3 ,QUOT,ENT,  \
            FN1,Z,   X,   C,   V,   B,   N,   M,   COMM,DOT,  SLSH, FN2,DEL, \
-           LCTL,LGUI,LALT,          FN0,                RALT,RGUI,APP, RCTL),
+           LCTL,LGUI,LALT,          SPC,                RALT,RGUI,APP, RCTL),
 
     /* Layer 1: Hybrid ESC layer
      * ,-----------------------------------------------------------.
@@ -41,7 +41,7 @@ const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
            TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,          TRNS,TRNS, \
            TRNS,TRNS,TRNS,         TRNS,                          TRNS,TRNS,TRNS,TRNS),
 
-    /* Layer 2: SpaceFn layer
+    /* Layer 2: SpaceFn/SemicolonF layer
      * ,-----------------------------------------------------------.
      * |  `| F1| F2| F3| F4| F5| F6| F7| F8| F9|F10|F11|F12|   |Del|
      * |-----------------------------------------------------------|
@@ -64,6 +64,7 @@ const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 const uint16_t PROGMEM fn_actions[] = {
     [0] = ACTION_LAYER_TAP_KEY(2, KC_SPC),
+    [3] = ACTION_LAYER_TAP_KEY(2, KC_SCLN),
     [1] = ACTION_LAYER_MODS(1, MOD_LSFT),
     [2] = ACTION_LAYER_MODS(1, MOD_RSFT),
 };
