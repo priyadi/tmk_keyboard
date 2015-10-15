@@ -17,11 +17,11 @@ const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [0] =
     KEYMAP(ESC, 1,   2,   3,   4,   5,   6,   7,   8,   9,   0,   MINS,EQL,  GRV,BSPC, \
            TAB, Q,   W,   E,   R,   T,   Y,   U,   I,   O,   P,   LBRC,RBRC,BSLS, \
-           BSPC,A,   S,   D,   F,   G,   H,   J,   K,   L,   SCLN,QUOT,ENT,  \
+           BSPC,A,   S,   D,   F,   G,   H,   J,   K,   L,   FN3 ,QUOT,ENT,  \
            FN1,Z,   X,   C,   V,   B,   N,   M,   COMM,DOT,  SLSH, FN2,DEL, \
            LCTL,LGUI,LALT,          FN0,                RALT,RGUI,APP, RCTL),
 
-    /* Layer 1: Hybrid ESC layer
+    /* Layer 1: Hybrid ESC and hard semicolon
      * ,-----------------------------------------------------------.
      * |  `|   |   |   |   |   |   |   |   |   |   |   |   |   |   |
      * |-----------------------------------------------------------|
@@ -37,7 +37,7 @@ const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [1] =
     KEYMAP( GRV,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS, \
            TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,     TRNS, \
-           TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,          TRNS,  \
+           TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,SCLN,TRNS,          TRNS,  \
            TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,          TRNS,TRNS, \
            TRNS,TRNS,TRNS,         TRNS,                          TRNS,TRNS,TRNS,TRNS),
 
