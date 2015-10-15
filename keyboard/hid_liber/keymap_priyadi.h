@@ -23,11 +23,37 @@ static const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
       ESC,   F1,   F2,   F3,   F4,   F5,   F6,   F7,   F8,   F9,  F10,  F11,  F12,       PSCR, SLCK,  BRK, \
       GRV,    1,    2,    3,    4,    5,    6,    7,    8,    9,    0, MINS,  EQL, BSPC,  INS, HOME, PGUP, \
       TAB,    Q,    W,    E,    R,    T,    Y,    U,    I,    O,    P, LBRC, RBRC, BSLS,  DEL,  END, PGDN, \
-     BSPC,    A,    S,    D,    F,    G,    H,    J,    K,    L, SCLN, QUOT,        ENT,                   \
-     LSFT, NUBS,    Z,    X,    C,    V,    B,    N,    M, COMM,  DOT, SLSH,       RSFT,         UP,       \
+     BSPC,    A,    S,    D,    F,    G,    H,    J,    K,    L,  FN3, QUOT,        ENT,                   \
+      FN1, NUBS,    Z,    X,    C,    V,    B,    N,    M, COMM,  DOT, SLSH,        FN2,         UP,       \
      LCTL, LGUI, LALT,              FN0,                         RALT, RGUI,  APP, RCTL, LEFT, DOWN, RGHT),
 
-/* Layer 1: SpaceFn layer
+/* Layer 1: shift pressed (hard semicolon)
+ *
+ * ,---.   ,---------------. ,---------------. ,---------------. ,-----------.
+ * |   |   |   |   |   |   | |   |   |   |   | |   |   |   |   | |   |   |   |
+ * `---'   `---------------' `---------------' `---------------' `-----------'
+ * ,-----------------------------------------------------------. ,-----------.
+ * |   |   |   |   |   |   |   |   |   |   |   |   |   |       | |   |   |   |
+ * |-----------------------------------------------------------| |-----------|
+ * |     |   |   |   |   |   |   |   |   |   |   |   |   |     | |   |   |   |
+ * |-----------------------------------------------------------| `-----------'
+ * |      |   |   |   |   |   |   |   |   |   | ; |   |        |              
+ * |-----------------------------------------------------------|     ,---.    
+ * |    |   |   |   |   |   |   |   |   |   |   |   |          |     |   |    
+ * |-----------------------------------------------------------| ,-----------.
+ * |   |   |   |                               |   |   |   |   | |   |   |   |
+ * `-----------------------------------------------------------' `-----------'
+ */
+
+ KEYMAP(\
+     TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS,       TRNS, TRNS, TRNS, \
+     TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, \
+     TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, \
+     TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, SCLN, TRNS,       TRNS,                   \
+     TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS,       TRNS,       TRNS,       \
+     TRNS, TRNS, TRNS,                   TRNS,                   TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS),
+
+/* Layer 2: SpaceFn/semicolonfn layer
  *
  * ,---.   ,---------------. ,---------------. ,---------------. ,-----------.
  * |   |   |   |   |   |   | |   |   |   |   | |   |   |   |   | |   |   |   |
@@ -52,35 +78,11 @@ static const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
       DEL, TRNS, TRNS, TRNS, TRNS, TRNS, HOME, LEFT, DOWN, RGHT, TRNS, TRNS,       TRNS,                   \
      TRNS, TRNS, TRNS, TRNS, TRNS, BTN3,  SPC,  END, TRNS, TRNS, TRNS, TRNS,       TRNS,       TRNS,       \
      TRNS, TRNS, TRNS,                   TRNS,                     NO, TRNS,  APP,  INS, TRNS, TRNS, TRNS),
-
-/* Layer 2: right cursor keys
- *
- * ,---.   ,---------------. ,---------------. ,---------------. ,-----------.
- * |   |   |   |   |   |   | |   |   |   |   | |   |   |   |   | |   |   |   |
- * `---'   `---------------' `---------------' `---------------' `-----------'
- * ,-----------------------------------------------------------. ,-----------.
- * |   |   |   |   |   |   |   |   |   |   |   |   |   |       | |   |   |   |
- * |-----------------------------------------------------------| |-----------|
- * |     |   |   |   |   |   |   |   |   |   |   |   |   |     | |   |   |   |
- * |-----------------------------------------------------------| `-----------'
- * |      |   |   |   |   |   |   |   |   |   |   |Pgu|        |              
- * |-----------------------------------------------------------|     ,---.    
- * |    |   |   |   |   |   |   |   |   |Hom|End|PgD|   Up     |     |   |    
- * |-----------------------------------------------------------| ,-----------.
- * |   |   |   |                               |***|Lef|Dow|Rig| |   |   |   |
- * `-----------------------------------------------------------' `-----------'
- */
-
- // KEYMAP(\
- //       NO,   NO,   NO,   NO,   NO,   NO,   NO,   NO,   NO,   NO,   NO,   NO,   NO,         NO,   NO,   NO, \
- //       NO,   NO,   NO,   NO,   NO,   NO,   NO,   NO,   NO,   NO,   NO,   NO,   NO,   NO,   NO,   NO,   NO, \
- //       NO,   NO,   NO,   NO,   NO,   NO,   NO,   NO,   NO,   NO,   NO,   NO,   NO,   NO,   NO,   NO,   NO, \
- //       NO,   NO,   NO,   NO,   NO,   NO,   NO,   NO,   NO,   NO,   NO, PGUP,         NO,                   \
- //       NO,   NO,   NO,   NO,   NO,   NO,   NO,   NO,   NO, HOME,  END, PGDN,         UP,         NO,       \
- //     TRNS, TRNS, TRNS,                     NO,                     NO, LEFT, DOWN, RGHT,   NO,   NO,   NO),
 };
 
 static const uint16_t PROGMEM fn_actions[] = {
-    [0] = ACTION_LAYER_TAP_KEY(1, KC_SPC),
+    [0] = ACTION_LAYER_TAP_KEY(2, KC_SPC),
     [3] = ACTION_LAYER_TAP_KEY(2, KC_SCLN),
+    [1] = ACTION_LAYER_MODS(1, MOD_LSFT),
+    [2] = ACTION_LAYER_MODS(1, MOD_RSFT),
 };
