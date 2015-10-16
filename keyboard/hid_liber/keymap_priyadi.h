@@ -25,7 +25,7 @@ static const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
       TAB,    Q,    W,    E,    R,    T,    Y,    U,    I,    O,    P, LBRC, RBRC, BSLS,  DEL,  END, PGDN, \
      BSPC,    A,    S,    D,    F,    G,    H,    J,    K,    L,  FN3, QUOT,        ENT,                   \
       FN1, NUBS,    Z,    X,    C,    V,    B,    N,    M, COMM,  DOT, SLSH,        FN2,         UP,       \
-     LCTL, LGUI, LALT,              FN0                        RALT, RGUI, SCLK, RCTL, LEFT, DOWN, RGHT),
+     LCTL, LGUI, LALT,              FN0                        RALT, RGUI, SLCK, RCTL, LEFT, DOWN, RGHT),
 
 /* Layer 1: shift pressed (hard semicolon)
  *
@@ -76,7 +76,7 @@ static const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      TRNS,   F1,   F2,   F3,   F4,   F5,   F6,   F7,   F8,   F9,  F10,  F11,  F12, DEL,  TRNS, TRNS, TRNS, \
      CAPS, TRNS, MPRV, MPLY, MNXT, TRNS, TRNS, PGUP,   UP, PGDN, PSCR, VOLD, VOLU, MUTE, TRNS, TRNS, TRNS, \
       DEL, TRNS, TRNS, TRNS, TRNS, TRNS, HOME, LEFT, DOWN, RGHT, TRNS, TRNS,       TRNS,                   \
-     TRNS, TRNS, TRNS, TRNS, TRNS, BTN3,  SPC, TRNS,  END, TRNS, TRNS, TRNS,       TRNS,       TRNS,       \
+     TRNS, TRNS, TRNS, TRNS, TRNS, BTN3,  SPC,  END, TRNS, TRNS, TRNS, TRNS,       TRNS,       TRNS,       \
      TRNS, TRNS, TRNS,                   TRNS,                     NO, TRNS,  APP,  INS, TRNS, TRNS, TRNS),
 };
 
