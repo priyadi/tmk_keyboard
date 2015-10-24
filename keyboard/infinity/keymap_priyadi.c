@@ -15,7 +15,7 @@ const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      * `-----------------------------------------------------------'
      */
     [0] =
-    KEYMAP(ESC, FN11,FN12,FN13,FN14,FN15,FN16,FN17,FN18,FN19,FN20,FN21,FN22,  GRV,BSPC, \
+    KEYMAP(ESC, 1,   2,   3,   4,   5,   6,   7,   8,   9,   0,   MINS, EQL, GRV,BSPC, \
            TAB, Q,   W,   E,   R,   T,   Y,   U,   I,   O,   P,   LBRC,RBRC,BSLS, \
            BSPC,A,   S,   D,   F,   G,   H,   J,   K,   L,   FN3 ,QUOT,ENT,  \
            FN1,Z,   X,   C,   V,   B,   N,   M,   COMM,DOT,  SLSH, FN2,DEL, \
